@@ -1,1 +1,8 @@
+#theme: moonwalk # if you are using GitHub Pages, change it to remote_theme: abhinavs/moonwalk
 remote_theme: abhinavs/moonwalk
+highlighter: rouge
+sass:
+  style: :compressed
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
