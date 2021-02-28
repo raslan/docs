@@ -1,4 +1,3 @@
-# docs
 Guides and templates I use for my projects.
 
 ## Templates
