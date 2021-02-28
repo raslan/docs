@@ -1,3 +1,4 @@
+```json
 {
   "manifest_version": 2,
   "name": "Browser Extension",
@@ -15,3 +16,5 @@
     }
   }
 }
+
+```
