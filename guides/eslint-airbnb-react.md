@@ -1,5 +1,5 @@
 
-# Installing ESLint with Airbnb, a11y and React or Next.js <=11.0
+# Installing ESLint with Airbnb, a11y and React
 
 ## Use with Next.js >=11.0
 
