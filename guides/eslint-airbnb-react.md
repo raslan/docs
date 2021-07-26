@@ -1,7 +1,62 @@
 
-# Installing ESLint with Airbnb, a11y and React/Next.
+# Installing ESLint with Airbnb, a11y and React or Next.js <=11.0
 
-## Use with React
+## Use with Next.js >=11.0
+
+### Add dependencies
+
+```shell
+# add the basic requirements not provided by airbnb
+yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-jsx-a11y
+# install airbnb config and all its deps
+npx install-peerdeps -D eslint-config-airbnb
+```
+
+### Add .eslintrc
+```js
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/strict",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@next/next/recommended",
+    "prettier"
+  ],
+  "rules": {
+    // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
+    "react/react-in-jsx-scope": "off",
+    // NextJs specific fix: allow jsx syntax in js files
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/display-name": 1,
+    "react/prop-types": "off",
+    "react/no-danger": "off",
+    "react/jsx-props-no-spreading": [
+      1,
+      {
+        "html": "enforce",
+        "custom": "ignore"
+      }
+    ]
+  }
+}
+
+```
+
+### Add .eslintignore
+```shell
+# don't ever lint node_modules
+node_modules
+# don't lint build output (make sure it's set to your correct build folder name)
+dist
+# don't lint nyc coverage output
+coverage
+```
+
+## Use with React or Next.js <=11.0
 
 ### Download Packages
 
@@ -56,7 +111,7 @@ npx install-peerdeps -D eslint-config-airbnb
     // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
     "react/react-in-jsx-scope": "off",
     // NextJs specific fix: allow jsx syntax in js files
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/display-name": 1,
     "react/prop-types": "off",
     "react/no-danger": "off",
@@ -79,49 +134,4 @@ node_modules
 dist
 # don't lint nyc coverage output
 coverage
-```
-
-## Use with Next.js >=11.0
-
-### Add dependencies
-
-```shell
-# add the basic requirements not provided by airbnb
-yarn add -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-jsx-a11y
-# install airbnb config and all its deps
-npx install-peerdeps -D eslint-config-airbnb
-```
-
-### Add .eslintrc
-```js
-{
-  "extends": [
-    "eslint:recommended",
-    "plugin:jsx-a11y/strict",
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:@next/next/recommended",
-    "prettier"
-  ],
-  "rules": {
-    // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
-    "react/react-in-jsx-scope": "off",
-    // NextJs specific fix: allow jsx syntax in js files
-    "react/jsx-filename-extension": [
-      1,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ], //should add ".ts" if typescript project
-    "react/display-name": 1,
-    "react/prop-types": "off",
-    "react/no-danger": "off",
-    "react/jsx-props-no-spreading": [
-      1,
-      {
-        "html": "enforce",
-        "custom": "ignore"
-      }
-    ]
-  }
-}
-
 ```
