@@ -5,3 +5,4 @@ Guides and templates I use for my projects.
 
 ## Guides
 ### [ESLint + Airbnb + React/Next](/guides/eslint-airbnb-react.md)
+### [Express + Prettier + Airbnb + TypeScript + ts-node-dev](/guides/express-typescript-eslint-airbnb.md)
