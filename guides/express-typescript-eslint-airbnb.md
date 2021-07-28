@@ -65,6 +65,12 @@ out
 }
 ```
 
+### Initialize TypeScript configuration
+
+```bash
+yarn tsc --init
+```
+
 ### Create the file index.ts
 ```ts
 import express from "express";
