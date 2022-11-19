@@ -1,3 +1,5 @@
+# How to create a GraphQL API from just a JSON file
+
 ## Initialize a node project
 
 ```
@@ -84,7 +86,7 @@ const init = async () => {
 
   await startStandaloneServer(server, {
     context: async () => ({ prisma }),
-    listen: { port: 4000 },
+    listen: { port: 4000 }, // change as needed
   });
 };
 
@@ -112,3 +114,36 @@ yarn prisma generate
 yarn dev
 ```
 Access the server at http://localhost:4000
+
+
+# Bonus: REST
+
+## Install sofa-api
+
+```
+yarn add sofa-api
+```
+
+## Add lines to index.ts
+
+```ts
+import http from 'http';
+import { useSofa } from 'sofa-api';
+
+...
+
+const restServer = http.createServer(
+    useSofa({
+      basePath: '/api',
+      schema,
+      context: async () => ({ prisma }),
+    })
+  );
+
+  const port = 4001; // change this as needed
+  const host = 'localhost'; // change to where the application is hosted
+
+  restServer.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+  });
+```
