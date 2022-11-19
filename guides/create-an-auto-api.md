@@ -1,3 +1,9 @@
+## Initialize a node project
+
+```
+yarn init -y
+```
+
 ## Install dependencies
 
 ```
@@ -10,14 +16,18 @@ yarn add @prisma/client graphql@^15.3.0 class-validator type-graphql reflect-met
 
 ```
 yarn prisma init --datasource-provider mongodb
-
-yarn prisma db pull
 ```
 
 ## Add mongodb connection to .env
 
 ```
 mongodb+srv://username:password@address.mongodb.net/tablename?retryWrites=true&w=majority
+```
+
+## Pull the database schema into Prisma
+
+```
+yarn prisma db pull
 ```
 
 ## Add generator to prisma
@@ -79,6 +89,12 @@ const init = async () => {
 };
 
 init();
+```
+
+## Generate the prisma schema
+
+```
+yarn prisma generate
 ```
 
 ## Add scripts to package.json
