@@ -36,7 +36,7 @@ yarn prisma db pull
 
 ## Add generator to prisma
 
-```
+```prisma
 generator typegraphql {
   provider = "typegraphql-prisma"
   output   = "../prisma/generated/type-graphql"
@@ -144,3 +144,36 @@ import 'reflect-metadata';
 yarn dev
 ```
 Access the server at http://localhost:3000/api/graphql
+
+## Enabling CORS to use outside Vercel
+
+Add the following to `next.config.js`.
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value:
+              'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+          },
+        ],
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;
+```
