@@ -177,3 +177,48 @@ const nextConfig = {
 
 module.exports = nextConfig;
 ```
+
+## Automatically generate types for the client
+
+Install graphql-code-generator
+```
+yarn add -D ts-node @graphql-codegen/cli @graphql-codegen/client-preset
+```
+
+Create `codegen.ts`
+
+```ts
+import { CodegenConfig } from '@graphql-codegen/cli';
+
+const config: CodegenConfig = {
+  schema: 'http://localhost:3000/api/graphql',
+  documents: ['pages/**/*.tsx'],
+  ignoreNoDocuments: true, // for better experience with the watcher
+  generates: {
+    './gql/': {
+      preset: 'client',
+      plugins: [],
+    },
+  },
+};
+
+export default config;
+
+```
+
+Install concurrently
+```
+yarn add -D concurrently
+```
+
+Modify your `dev` script in `package.json`
+
+```
+"dev": "concurrently \"yarn next dev\" \"yarn graphql-codegen --watch\"",
+```
+
+Add Apollo client
+
+```
+yarn add @apollo/client
+```
