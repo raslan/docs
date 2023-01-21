@@ -130,6 +130,12 @@ generator typegraphql {
 
 ```
 
+## Generate the prisma schema
+
+```
+yarn prisma generate
+```
+  
 ## Create /pages/api/graphql.ts
 
 ```ts
@@ -175,12 +181,6 @@ export const config = {
   },
 };
 
-```
-
-## Generate the prisma schema
-
-```
-yarn prisma generate
 ```
 
 ## Add this line to the top of `_app.tsx`
@@ -282,6 +282,7 @@ Add React query provider and a global graphql-request client to `_app.tsx`
 import 'reflect-metadata';
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { GraphQLClient } from 'graphql-request';
 
 const queryClient = new QueryClient();
 
