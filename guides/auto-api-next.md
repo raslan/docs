@@ -1,3 +1,55 @@
+## Create a MongoDB database and add your data (skip if you already have a MongoDB database with data in it)
+
+Head to [mongodb.com](mongodb.com) and sign up for a free Atlas account or set up mongodb locally
+
+Create your project
+
+![image](https://user-images.githubusercontent.com/24810123/213875987-e529e32e-dac1-42a2-b2ad-b2fafbd0947d.png)
+
+Create a cluster, select `SHARED` for the free tier.
+
+![image](https://user-images.githubusercontent.com/24810123/213876016-cc50b07b-749a-4c5b-8b3c-b82697148727.png)
+
+Create your user and add your IP address to the list of allowed IP addresses (or 0.0.0.0 to allow any connection).
+
+![image](https://user-images.githubusercontent.com/24810123/213876088-1b4d42db-f6e1-4609-a6a2-563035cc97f9.png)
+
+Press `connect` on your cluster on mongodb.com
+
+![image](https://user-images.githubusercontent.com/24810123/213876204-558c3d87-9c95-4ed4-8cc0-cb2b21c9043f.png)
+
+Click on Compass
+
+![image](https://user-images.githubusercontent.com/24810123/213876216-82bfb6ce-b0e4-4ccc-834d-efcda13a4d5c.png)
+
+Download Compass if you don't have it, and copy the connection string
+
+![image](https://user-images.githubusercontent.com/24810123/213876259-1dc4bb37-f9c5-4692-87dc-cdc041297964.png)
+
+Paste the connection string into Compass, replacing <password> with the password for the database user you created earlier and press connect
+  ![image](https://user-images.githubusercontent.com/24810123/213876317-835ad3e3-e3b4-4fd2-aea3-901130dee0d8.png)
+
+  Click databases
+  ![image](https://user-images.githubusercontent.com/24810123/213876355-b0fccd85-7187-4038-99ef-02ec163c3f03.png)
+
+  Click create
+  ![image](https://user-images.githubusercontent.com/24810123/213876371-56f39960-4660-4b44-ba84-c6b1a6359837.png)
+
+  In the database name and collection name fields, describe the data type your database will contain, for example a database of football players could be called `football_players` or `players`
+  ![image](https://user-images.githubusercontent.com/24810123/213876423-ef89a240-8830-4b19-9792-4ee2e6c707bd.png)
+
+  Once the database is created, click on it
+  ![image](https://user-images.githubusercontent.com/24810123/213876476-edb8e9e0-8b2d-4403-85f6-07120e4b74b1.png)
+
+  Click the collection
+  ![image](https://user-images.githubusercontent.com/24810123/213876501-c3770aeb-8c53-4eae-a662-0acf44a03539.png)
+
+  You can now upload your JSON or CSV file to the database to fill it
+  ![image](https://user-images.githubusercontent.com/24810123/213876522-74caf063-cd06-440a-a6cb-f1710858c457.png)
+
+  We now have a database with the data we need, you can close Compass.
+  
+
 ## Create a NextJS app with TypeScript
 
 #### Answer the questions as you like but when asked if you want to use the new `/app` directory, say no.
