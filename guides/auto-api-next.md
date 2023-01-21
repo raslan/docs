@@ -190,7 +190,7 @@ Create `codegen.ts`
 import { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
-  schema: process.env.NEXT_PUBLIC_API_URL as string,
+  schema: "http://localhost:3000/api/graphql",
   documents: ['pages/**/*.tsx'],
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
