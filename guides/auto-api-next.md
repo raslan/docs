@@ -20,10 +20,11 @@ yarn add apollo-server-micro micro-cors micro @prisma/client graphql@^15.3.0 cla
 yarn prisma init --datasource-provider mongodb
 ```
 
-## Add mongodb connection to .env
+## Add mongodb connection and the eventual graphql api url to .env
 
 ```
-mongodb+srv://username:password@address.mongodb.net/tablename?retryWrites=true&w=majority
+DATABASE_URL="mongodb+srv://username:password@address.mongodb.net/tablename?retryWrites=true&w=majority"
+NEXT_PUBLIC_API_URL="http://localhost:3000/api/graphql"
 ```
 
 ## Pull the database schema into Prisma
