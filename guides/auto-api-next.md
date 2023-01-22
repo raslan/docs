@@ -52,7 +52,11 @@ Paste the connection string into Compass, replacing <password> with the password
 
 ## Create a NextJS app with TypeScript
 
-#### Answer the questions as you like but when asked if you want to use the new `/app` directory, say no.
+#### Answer the questions as you like but when asked
+  
+'if you want to use the new `/app` directory' no
+  
+'if you want to use `src` directory' no
 
 ```
 yarn create next-app --typescript
