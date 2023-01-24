@@ -82,7 +82,7 @@ yarn create next-app --typescript
 ```
 yarn add prisma typegraphql-prisma -D
 
-yarn add @apollo/server @as-integrations/next @prisma/client graphql class-validator type-graphql@next reflect-metadata graphql-scalars graphql-fields @types/graphql-fields tslib
+yarn add @apollo/server @as-integrations/next @prisma/client graphql class-validator type-graphql@next reflect-metadata graphql-scalars graphql-fields @types/graphql-fields tslib 
 ```
 
 ## Initialize prisma
