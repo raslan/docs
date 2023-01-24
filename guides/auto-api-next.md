@@ -161,44 +161,23 @@ yarn prisma generate
 import 'reflect-metadata';
 import { resolvers } from 'prisma/generated/type-graphql';
 import { PrismaClient } from '@prisma/client';
-import { ApolloServer } from 'apollo-server-micro';
-import Cors from 'micro-cors';
+import { ApolloServer } from '@apollo/server';
 import * as tq from 'type-graphql';
+import { startServerAndCreateNextHandler } from '@as-integrations/next';
 
 const prisma = new PrismaClient();
 
-const cors = Cors();
-
-export default cors(async function handler(req, res) {
-  const schema = await tq.buildSchema({
-    resolvers,
-    validate: false,
-  });
-
-  const context = () => {
-    return {
-      prisma,
-    };
-  };
-
-  const apolloServer = new ApolloServer({ schema, context });
-
-  if (req.method === 'OPTIONS') {
-    res.end();
-    return false;
-  }
-  await apolloServer.start();
-
-  await apolloServer.createHandler({
-    path: '/api/graphql',
-  })(req, res);
+const schema = tq.buildSchemaSync({
+  resolvers,
+  validate: false,
 });
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+const server = new ApolloServer({ schema });
+
+export default startServerAndCreateNextHandler(server, {
+  context: async () => ({ prisma }),
+});
+
 
 ```
 
