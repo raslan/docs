@@ -1,3 +1,18 @@
+## Introduction
+
+In this guide we'll be using a JSON or CSV file with some data in it to build a fully featured GraphQL API inside a NextJS application.
+
+For this to work, we'll need some tools, here's links to all the tools used in this guide if you'd like to check any of them out or potentially explore replacements:
+
+- [Prisma](https://prisma.io) The database connector where all the magic happens
+- [Typegraphql-Prisma](https://prisma.typegraphql.com/) To generate the TypeGraphQL schema for Apollo server from Prisma
+- [TypeGraphQL](https://typegraphql.com/)
+- [Apollo Server](https://www.apollographql.com/)
+- [graphql-code-generator](https://the-guild.dev/graphql/codegen) To build the types for the frontend
+- [Next](https://nextjs.org/) The fullstack framework we'll be using
+- [React](https://reactjs.org) The frontend part
+
+
 ## Create a MongoDB database and add your data (skip if you already have a MongoDB database with data in it)
 
 Head to [mongodb.com](mongodb.com) and sign up for a free Atlas account or set up mongodb locally
@@ -65,9 +80,9 @@ yarn create next-app --typescript
 ## Install dependencies
 
 ```
-yarn add prisma typegraphql-prisma @types/micro-cors -D
+yarn add prisma typegraphql-prisma -D
 
-yarn add apollo-server-micro micro-cors micro @prisma/client graphql@^15.3.0 class-validator type-graphql reflect-metadata graphql-scalars graphql-fields @types/graphql-fields tslib
+yarn add @apollo/server @as-integrations/next @prisma/client graphql class-validator type-graphql@next reflect-metadata graphql-scalars graphql-fields @types/graphql-fields tslib
 ```
 
 ## Initialize prisma
