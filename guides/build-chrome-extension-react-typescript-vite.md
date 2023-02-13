@@ -30,3 +30,6 @@ Now you can begin developing your extension, if you have a specific idea in mind
 
 ## Displaying emails
 
+## Autofilling form fields on the page
+
+## Conclusion
