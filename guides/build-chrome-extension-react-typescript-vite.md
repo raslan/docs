@@ -10,3 +10,7 @@ yarn create vite
 
 ## Add TailwindCSS
 
+## Configure Vite
+
+## Adding a Content Script and Background Script
+
