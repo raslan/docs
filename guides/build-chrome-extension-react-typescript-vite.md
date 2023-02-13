@@ -6,3 +6,5 @@
 yarn create vite
 ```
 
+## Add CRXJS to the project
+
