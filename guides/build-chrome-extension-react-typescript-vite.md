@@ -14,3 +14,5 @@ yarn create vite
 
 ## Adding a Content Script and Background Script
 
+## Adding an options page for fullscreen functionality (optional)
+
