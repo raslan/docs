@@ -22,3 +22,5 @@ yarn create vite
 
 ## Communication between React and the content script
 
+## Sharing state between React and the content script
+
