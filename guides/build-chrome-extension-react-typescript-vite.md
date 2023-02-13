@@ -18,3 +18,5 @@ yarn create vite
 
 ## Load the extension
 
+## Persisting extension state
+
