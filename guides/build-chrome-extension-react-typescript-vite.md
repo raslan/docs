@@ -16,3 +16,5 @@ yarn create vite
 
 ## Adding an options page for fullscreen functionality (optional)
 
+## Load the extension
+
