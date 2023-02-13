@@ -20,3 +20,5 @@ yarn create vite
 
 ## Persisting extension state
 
+## Communication between React and the content script
+
