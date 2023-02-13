@@ -28,3 +28,5 @@ Now you can begin developing your extension, if you have a specific idea in mind
 
 ## Reading emails
 
+## Displaying emails
+
