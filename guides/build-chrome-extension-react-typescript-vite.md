@@ -2,3 +2,7 @@
 
 ## Create a Vite application with React and Typescript
 
+```
+yarn create vite
+```
+
