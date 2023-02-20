@@ -91,6 +91,12 @@ Install tailwindcss and its peer dependencies with yarn
 yarn add -D tailwindcss postcss autoprefixer
 ```
 
+Create a tailwind configuration file and postcss configuration
+
+```bash
+yarn tailwindcss init -p
+```
+
 ## Adding a Content Script and Background Script
 
 ## Adding an options page for fullscreen functionality (optional)
