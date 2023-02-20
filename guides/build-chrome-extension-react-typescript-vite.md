@@ -97,6 +97,23 @@ Create a tailwind configuration file and postcss configuration
 yarn tailwindcss init -p
 ```
 
+Edit your tailwind.config.cjs to point to your files
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+
 ## Adding a Content Script and Background Script
 
 ## Adding an options page for fullscreen functionality (optional)
