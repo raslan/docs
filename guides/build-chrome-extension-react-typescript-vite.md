@@ -83,6 +83,8 @@ export default defineConfig({
 });
 ```
 
+## Add TailwindCSS
+
 ## Adding a Content Script and Background Script
 
 ## Adding an options page for fullscreen functionality (optional)
