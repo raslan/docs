@@ -6,9 +6,11 @@
 yarn create vite
 ```
 
-## Add CRXJS to the project
+Select "React" and "Typescript + SWC" when prompted.
 
-## Add TailwindCSS
+cd into your folder
+
+## Add CRXJS and other extension utilities to the project
 
 ## Configure Vite
 
