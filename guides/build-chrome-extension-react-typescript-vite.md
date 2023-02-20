@@ -85,6 +85,12 @@ export default defineConfig({
 
 ## Add TailwindCSS
 
+Install tailwindcss and its peer dependencies with yarn
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer
+```
+
 ## Adding a Content Script and Background Script
 
 ## Adding an options page for fullscreen functionality (optional)
