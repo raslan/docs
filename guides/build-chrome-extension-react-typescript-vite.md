@@ -12,6 +12,10 @@ cd into your folder
 
 ## Add CRXJS and other extension utilities to the project
 
+```bash
+yarn add @crxjs/vite-plugin@beta rollup-plugin-zip vite-tsconfig-paths -D
+```
+
 ## Configure Vite
 
 ## Adding a Content Script and Background Script
