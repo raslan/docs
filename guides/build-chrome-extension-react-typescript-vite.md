@@ -16,6 +16,23 @@ cd into your folder
 yarn add @crxjs/vite-plugin@beta rollup-plugin-zip vite-tsconfig-paths -D
 ```
 
+Let's edit our two tsconfig files to enable our development to be smoother
+
+Edit `tsconfig.node.json`
+
+```json
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["vite.config.ts", "manifest.json"]
+}
+```
 ## Configure Vite
 
 ## Adding a Content Script and Background Script
