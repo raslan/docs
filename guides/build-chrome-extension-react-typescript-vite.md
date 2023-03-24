@@ -13,7 +13,7 @@ cd into your folder
 ## Add CRXJS and other extension utilities to the project
 
 ```bash
-yarn add @crxjs/vite-plugin@beta rollup-plugin-zip vite-tsconfig-paths -D
+yarn add @crxjs/vite-plugin@beta rollup-plugin-zip vite-tsconfig-paths @types/chrome -D
 ```
 
 Let's edit our two tsconfig files to enable our development to be smoother
