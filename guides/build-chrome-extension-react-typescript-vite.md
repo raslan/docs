@@ -6,7 +6,7 @@
 yarn create vite
 ```
 
-Select "React" and "Typescript + SWC" when prompted.
+Select "React" and "Typescript" when prompted.
 
 cd into your folder
 
@@ -66,7 +66,7 @@ Edit `vite.config.ts` in the root of the project
 
 ```ts
 import { defineConfig, Plugin } from 'vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { crx } from '@crxjs/vite-plugin';
 import manifest from './manifest.json';
 import tsconfigPaths from 'vite-tsconfig-paths';
